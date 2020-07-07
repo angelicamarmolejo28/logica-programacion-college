@@ -16,13 +16,14 @@ public class College {
      */
     public static void main(String[] args) {
         
-        People person1= new People ("luis", "perez", 123456, "soltero");
+        People person1= new People ("luis", "perez", 0, "soltero");
         System.out.println ("marital status=" + person1.maritalstatus);
         person1.setMaritalStatus("casado");
         System.out.println ("marital status=" + person1.maritalstatus);
         
         Students student1= new Students ("angel", "arias", 38652, "divorciado");
         student1.setEnrollCourse("matematicas");
+        student1.setEnrollCourse("ciencias");
         student1.setEnrollCourse("ciencias");
         System.out.println ("courses=" + student1.courses);
         

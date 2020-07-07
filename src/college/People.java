@@ -10,22 +10,31 @@ package college;
  * @author angelica
  */
 public class People {
-   public String name;
-   public String lastname;
-   int id;
-   public String maritalstatus;
-   
-   public People (String name, String lastname, int id, String maritalStatus){
-        this.name=name;
-        this.lastname=lastname;
-        this.id=id;
-        this.maritalstatus=maritalStatus;
+  public String name;
+  public String lastname;
+  int id;
+  public String maritalstatus;
+
+  public People (String name, String lastname, int id, String maritalStatus){
+    try {
+      if(id <= 0){
+        throw new ArithmeticException("The ID is not valid");
+      }
+      this.id=id;
     }
-   
-    public void setMaritalStatus (String maritalStatus) {
-        this.maritalstatus=maritalStatus;
-   }
-    
-      
+    catch (Exception exp) {
+      System.out.println("Error: "+exp.getMessage());
     }
+    this.name=name;
+    this.lastname=lastname;
+    this.maritalstatus=maritalStatus;
+    }
+
+  public void setMaritalStatus (String maritalStatus) {
+    this.maritalstatus=maritalStatus;
+  }
+
+
+} 
+
 
